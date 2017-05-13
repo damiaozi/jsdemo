@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>瑞丽模特</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+
+		}
+
+		li{
+			list-style: none;
+		}
+		.container{
+			position: relative;
+			width: 500px;
+			height: 500px;
+		
+			margin: 50px auto;
+		}
+
+		.content{
+			width: 265px;
+			margin: 0 auto;
+			padding: 8px;
+			background: #E7EFE7;
+			text-align: center;
+		}
+
+		.menu{
+			
+		/* 	width: 260px;
+		 */
+			overflow: hidden;
+			margin: 20px auto;
+
+		}
+
+		.menu li{
+			float: left;
+			border: 2px solid #ccc;
+			padding: 2px;
+			background: #fff;
+			width: 80px;
+			height: 80px;
+			position: relative;
+		}
+
+	
+
+		.menu .active{
+			
+			border: 2px solid #e72163;
+			padding: 2px;
+		}
+
+		
+
+		.menu img{
+			width: 80px;
+			height: 80px;
+			display: block;
+		}
+
+		.menu p{
+			position: absolute;;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: #e72163;
+			color: #fff;
+			text-align: center;
+			line-height: 80px;
+			display: none;
+		}
+		
+		.menu .active{
+			display: block;
+		}
+
+
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+
+		var aNames = [
+		'邓紫棋','范冰冰','杨幂',
+		'Angelababy','唐嫣','刘诗诗',
+		'李小璐','柳岩','赵丽颖',
+		'张柏芝','波多野结衣','苍井空'];
+		 var oMenu = document.getElementById('menu');
+		var aMenuItem = oMenu.getElementsByTagName('li')
+		var aItemP = oMenu.getElementsByTagName('p')
+		// var aMenuR = document.getElementsByClassName('menu-r')
+		for (var i = 0; i < aMenuItem.length; i++) {
+			aMenuItem[i].index= i;
+			aMenuItem[i].onmouseover = function(){
+				this.className = 'active';
+
+				if(this.index ==2 || this.index ==5||this.index ==8 ||this.index ==11){
+					aItemP[this.index-1].className='active';
+					aItemP[this.index-1].innerHTML = aNames[this.index];
+					aMenuItem[this.index-1].className='active';
+
+				}else{
+					aItemP[this.index+1].className='active';
+					aItemP[this.index+1].innerHTML = aNames[this.index];
+					aMenuItem[this.index+1].className='active';
+				}				
+
+			};
+			aMenuItem[i].onmouseout = function(){
+				this.className = '';
+				if(this.index ==2 || this.index ==5||this.index ==8 ||this.index ==11){
+					aItemP[this.index-1].className='';
+					aMenuItem[this.index-1].className='';
+				}else{
+					aItemP[this.index+1].className='';
+					aMenuItem[this.index+1].className='';
+				}
+				
+			};
+		 }
+	}
+		
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div>
+				<span class="line"></span>
+				<h3>瑞丽模特</h3>
+				<span class="line"></span>
+			</div>
+			<ul id="menu" class="menu">
+				<li><a href="javascript:;"><img src="images/img_0.jpg"><p></p></a></li>
+				<li><a href="javascript:;"><img src="images/img_1.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_2.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_3.jpg"><p></p></a></li>
+				<li><a href="javascript:;"><img src="images/img_4.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_5.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_6.jpg"><p></p></a></li>
+				<li><a href="javascript:;"><img src="images/img_7.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_8.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_9.jpg"><p></p></a></li>
+				<li><a href="javascript:;"><img src="images/img_10.jpg"><p>陈曦</p></a></li>
+				<li><a href="javascript:;"><img src="images/img_11.jpg"><p>陈曦</p></a></li>
+			</ul>
+		</div>
+		
+	
+	</div>
+</body>
+</html>
