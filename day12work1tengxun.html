@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>1腾讯首页-搜索栏</title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		li{
+			list-style: none;
+		}
+
+		.container{
+			width: 500px;
+			min-height: 500px;
+			margin: 50px auto;
+		}
+
+		.select{
+			width: 280px;
+			height: 35px;
+			border: 1px solid #3297d8;
+			line-height: 25px;
+
+		}
+
+		.select:hover{
+			border: 2px solid #3297d8;
+		}
+
+
+
+		.selwrap{
+			position: relative;
+			float: left;
+			display: block;
+			font-size: 14px;
+			color: #ccc;
+			width: 50px;
+			height: 100%;
+			text-align: center;
+			line-height: 35px;
+		}
+
+	
+
+		.select ul{
+			display: none;
+			position: absolute;
+			top: 35px;
+			left: -1px;
+			width: 50px;
+			height: auto;
+			z-index: 10;
+			background-color: #fff;
+			border: 2px solid #3297d8;
+			border-top: 0;
+			text-align: center;
+		}
+	.active ul{
+			display: block;
+			
+		}
+
+
+
+		.select li:hover{
+			color: #3297d8;
+			background-color: #ccc;
+		}
+
+		.input1{
+			float: right;
+			width: 200px;
+			height: 90%;
+			border: 0;
+			outline: none;
+			margin:0 10px;
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="select">
+			<div id="selwrap" class="selwrap">
+				<span id="selok" class="selok" >网页</span>
+				<ul id="lst">
+					<li><span>网页</span></li>
+					<li><span>图片</span></li>
+					<li><span>视频</span></li>
+					<li><span>音乐</span></li>
+					<li><span>地图</span></li>
+					<li><span>问问</span></li>
+					<li><span>百科</span></li>
+					<li><span>新闻</span></li>
+					<li><span>购物</span></li>
+				</ul>
+			</div>
+			
+			<input class="input1" type="text" name="search">
+		</div>
+
+	</div>    
+
+	<script type="text/javascript">
+		var oSelwrap = document.getElementById('selwrap');
+		var lst = document.getElementById('lst');
+		oSelwrap.onmouseover = function(){
+			
+			oSelwrap.className = 'selwrap active';
+		}
+		oSelwrap.onmouseout = function(){
+				oSelwrap.className = 'selwrap';
+		}
+		
+		
+
+		
+
+	</script>
+</body>
+</html>

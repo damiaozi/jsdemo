@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>3京东首页-顶部</title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		li{
+			list-style: none;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		.container{
+			width: 800px;
+			min-height: 500px;
+			margin: 50px auto;
+		}
+
+		.nav{
+			width: 90%;
+			margin: 0 auto;
+			height: 40px;
+			background-color: #f5f5f5;
+
+		}
+		.nav-lst >li{
+			float: left;
+			height: 100%;
+			line-height: 40px;
+			text-align: center;
+			margin: 0 10px;
+		}
+
+		a{
+			color: #ccc;
+			
+		}
+		
+	
+		.active{
+			position: relative;
+		}
+
+		.lijd .menu{
+			display: none;
+			
+		}
+
+		.active .menu{
+			display: block;
+			position: absolute;
+			top: 40px;
+			left: 0;
+			width: 200px;
+			height: 120px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+		}
+
+		.active .menu li{
+			float: left;
+			padding: 5px 5px;
+
+		}
+		.active .lia{
+			position: relative;
+			z-index: 10;
+			display: block;
+			
+			height: 100%;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-bottom: 1px solid #fff;
+		}
+
+		.active .menu li a{
+
+			color: #f00;
+			
+		}
+
+		.active .menu li a:hover{
+			color: #ccc;
+		}
+		
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="nav">
+			<ul class="nav-lst">
+				<li><a href="#">免费注册</a></li>
+				<li><a href="#">我的订单</a></li>
+				<li id="lijd" class="lijd"><a class="lia" href="#">我的京东</a>
+				<ul class="menu">
+					<li><a href="#">aaa</a></li>
+					<li><a href="#">bbb</a></li>
+					<li><a href="#">ccc</a></li>
+				</ul>
+
+			</li>
+			<li><a href="#">京东会员</a></li>
+		</ul>
+	</div>
+
+</div>    
+
+<script type="text/javascript">
+	var oLijd = document.getElementById('lijd');
+	
+
+	oLijd.onmouseover = function(){
+	
+		lijd.className='active';
+	
+	} 
+	oLijd.onmouseout = function(){
+	
+		lijd.className='lijd';
+
+	} 
+	
+</script>
+</body>
+</html>
